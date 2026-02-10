@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<!-- Now I'm just like all of the 13 year old chuds on TikTok! -->
+
+<html>
+	<head>
+		<title>Gembia's Anonymous Inbox</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	
+	<body>
+		<p>I'll respond to these on X/Twitter, that is, if I don't forget. Note that this includes basic information like your I.P address!<p>
+		<hr>
+		<br>
+		<input type="text" id="anonmessage"></input>
+		<button type="button" onclick="sendanonmessage()">Send</button>
+		<p id="resulttext" hidden style="color: lime;">Success!<p>
+		<script>
+			function sendanonmessage() {
+				fetch("https://webhook.site/8c9ebfa8-478e-420d-b082-7e0ca932c28a", {
+					method: "POST",
+					body: document.getElementById("anonmessage").value
+				});
+				document.getElementById("resulttext").removeAttribute("hidden");
+			}
+		</script>
+	</body>
+	
+</html>
